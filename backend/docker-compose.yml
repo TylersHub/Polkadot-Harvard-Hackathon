@@ -1,0 +1,12 @@
+services:
+  mongo:
+    image: mongo:7
+    ports: ["27017:27017"]
+  api:
+    build: ./backend
+    ports: ["4000:4000"]
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/gap
+      - CONTRACT_ADDR=<deployed_contract>
+      - RPC_URL=https://rpc.api.moonbase.moonbeam.network
+      - PRIVATE_KEY=0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3

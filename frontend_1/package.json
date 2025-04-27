@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@polkadot/extension-dapp": "^0.58.8",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.9.0",
+    "ethers": "^6.13.7",
+    "postcss": "^8.5.3",
+    "swr": "^2.3.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.4"
+  }
+}
