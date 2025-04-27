@@ -1,20 +1,20 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { useWallet } from './context/WalletContext';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { useWallet } from "./context/WalletContext";
 
 // Layouts
-import MainLayout from './layouts/MainLayout';
+import MainLayout from "./layouts/MainLayout";
 
 // Pages
-import HomePage from './pages/HomePage';
-import ListingsPage from './pages/ListingsPage';
-import ListingDetailPage from './pages/ListingDetailPage';
-import CreateListingPage from './pages/CreateListingPage';
-import ProfilePage from './pages/ProfilePage';
-import NotFoundPage from './pages/NotFoundPage';
+import HomePage from "./pages/HomePage";
+import ListingsPage from "./pages/ListingsPage";
+import ListingDetailPage from "./pages/ListingDetailPage";
+import CreateListingPage from "./pages/CreateListingPage";
+import ProfilePage from "./pages/ProfilePage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 // Components
-import WalletConnectModal from './components/wallet/WalletConnectModal';
+import WalletConnectModal from "./components/wallet/WalletConnectModal";
 
 function App() {
   const { isModalOpen } = useWallet();
@@ -31,7 +31,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-      
+
       {isModalOpen && <WalletConnectModal />}
     </div>
   );
